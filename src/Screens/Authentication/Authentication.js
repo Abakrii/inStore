@@ -3,6 +3,8 @@ import {Box , Text} from "react-native-design-utility"
 import OnBoardingLogo from '../../commons/onBoardingLogo';
 import {TouchableOpacity , Animated , Button} from 'react-native';
 import LoginButton from '../../commons/LoginButton';
+
+import { FacebookApi } from '../../api/Facebook';
 class Authentication extends Component{
     state = {
             opacity : new Animated.Value(0),
@@ -31,6 +33,17 @@ class Authentication extends Component{
             useNativeDriver : true,
         }).start()
     };
+
+     onFacebookPress = async () => {
+    try {
+      const token = await FacebookApi.loginAsync();
+
+      console.log('token', token);
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
    render() {
        const logoTranslate = this.state.position.interpolate({
            inputRange : [0,1],
