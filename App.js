@@ -21,7 +21,7 @@ export default class App extends React.Component {
 
        Promise.all([...imageAssets]);
       this.setState({isReady: true});
-}
+};
 
   render() {
     if(!this.state.isReady){
