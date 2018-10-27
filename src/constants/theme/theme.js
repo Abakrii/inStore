@@ -1,12 +1,12 @@
 const color = {
   black: '#212121',
 
-  greyDarkest: '#242424',
-  greyDarker: '#616161',
-  greyDark: '#757575',
+  greyDarkest: '#24242',
+  greyDarker: '#707070',
+  greyDark: '#8E8E93',
   grey: '#9e9e9e',
   greyLight: '#bdbdbd',
-  greyLighter: '#e0e0e0',
+  greyLighter: '#F5F5F5',
   greyLightest: '#eeeeee',
 
   white: '#fff',
@@ -38,21 +38,25 @@ const color = {
   greenDarkest: '#1b5e20',
   greenDarker: '#2e7d32',
   greenDark: '#388e3c',
-  green: '#4caf50',
+  green: '#42B029',
   greenLight: '#66bb6a',
   greenLighter: '#81c784',
   greenLightest: '#a5d6a7',
+
+  googleBlue: '#1976D2',
+  facebookBlue: '#4D6FA9',
 };
 
 const theme = {
   text: {
     size: {
+      xs: 10,
       sm: 14,
       base: 16,
       md: 18,
       lg: 20,
       xl: 24,
-        '2xl':32,
+      '2xl': 32,
     },
     weight: {
       light: '200',
@@ -76,6 +80,7 @@ const theme = {
   },
   color,
   space: {
+    '2xs': 6,
     xs: 8,
     sm: 16,
     md: 24,
@@ -83,6 +88,7 @@ const theme = {
     xl: 40,
   },
   radius: {
+    '2xs': 3,
     xs: 6,
     sm: 10,
     base: 14,
@@ -101,10 +107,10 @@ const theme = {
       shadowColor: color.black,
       shadowOffset: {
         width: 0,
-        height: 0,
+        height: -1,
       },
-      shadowOpacity: 1,
-      shadowRadius: 1,
+      shadowOpacity: 0.16,
+      shadowRadius: 4,
     },
     {
       shadowColor: color.black,
