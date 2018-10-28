@@ -4,7 +4,8 @@ import OnBoardingLogo from '../../commons/onBoardingLogo';
 import {TouchableOpacity , Animated , Button} from 'react-native';
 import LoginButton from '../../commons/LoginButton';
 
-import { FacebookApi } from '../../api/Facebook';
+import { FacebookApi  } from '../../api/Facebook';
+import  {GoogleApi} from '../../api/Google';
 class Authentication extends Component{
     state = {
             opacity : new Animated.Value(0),
@@ -37,6 +38,16 @@ class Authentication extends Component{
      onFacebookPress = async () => {
     try {
       const token = await FacebookApi.loginAsync();
+
+      console.log('token', token);
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
+      onGooglePress = async () => {
+    try {
+      const token = await GoogleApi.loginAsync();
 
       console.log('token', token);
     } catch (error) {
